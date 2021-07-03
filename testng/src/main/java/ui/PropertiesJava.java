@@ -1,0 +1,31 @@
+package ui;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+public class PropertiesJava {
+	public String properties(String input) throws IOException {
+		Properties propertiesFile = new Properties();
+		FileInputStream inputStream = new FileInputStream("C:\\Users\\91987\\eclipse-workspace\\testng\\Test-input\\testData.properties");
+		propertiesFile.load(inputStream);
+		if(input.equalsIgnoreCase("getBrowser")) {
+			return propertiesFile.getProperty("browser");
+		}
+		else if(input.equalsIgnoreCase("getInputValue")) {
+			return propertiesFile.getProperty("TextboxValue");
+		}
+		else if(input.equalsIgnoreCase("getWebsiteURL")) {
+			return propertiesFile.getProperty("url");
+		}
+		else if(input.equalsIgnoreCase("getInputLocation")) {
+			return propertiesFile.getProperty("location");
+		}
+		else if(input.equalsIgnoreCase("getDriverSetup")) {
+			return propertiesFile.getProperty("DriverSetup");
+		}
+		return null;
+		
+	}
+}
