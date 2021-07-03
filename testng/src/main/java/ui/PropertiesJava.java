@@ -8,7 +8,7 @@ import java.util.Properties;
 public class PropertiesJava {
 	public String properties(String input) throws IOException {
 		Properties propertiesFile = new Properties();
-		FileInputStream inputStream = new FileInputStream("C:\\Users\\91987\\eclipse-workspace\\testng\\Test-input\\testData.properties");
+		FileInputStream inputStream = new FileInputStream(".\\Test-input\\testData.properties");
 		propertiesFile.load(inputStream);
 		if(input.equalsIgnoreCase("getBrowser")) {
 			return propertiesFile.getProperty("browser");
