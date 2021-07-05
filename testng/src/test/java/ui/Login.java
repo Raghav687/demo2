@@ -147,8 +147,9 @@ public class Login {
 				System.out.println();
 				System.out.println();
 				obj[rowCount][2] = stringArray[i];
+				rowCount++;
 			}
-			rowCount++;
+			
 		}
 		
 		int rows = obj.length;
